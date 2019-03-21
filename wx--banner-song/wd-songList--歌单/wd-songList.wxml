@@ -1,0 +1,38 @@
+<view class="display_flex song_list_content">
+	<block wx:for="{{songList}}" wx:key="songList">
+		<button bindtap="enterSong" data-index="{{index}}" data-songtpe="lists" style="margin-right: {{(index+1)%2 ? '24rpx': '0'}}"  formType="submit" class="song_list_all">
+			<view class="song_list_all " style="">
+				<view class="song_list_cover">
+					<image class="song_list_cover_img"  src="{{item.img}}" />   
+			        <view class="display_flex song_list_bottom">
+						<view class="display_flex" style="margin-left: 12rpx;">
+				          	<image class="ico_list_playpeople " src="https://static.zuiqiangyingyu.cn/admin/1808/0824ico_list_playpeople.png" />  
+				          	<view class="swiper_right_text ">
+				          		{{item.own_users}}
+				          	</view>
+				        </view>
+				        <view class="display_flex " style="margin-right: 12rpx;">
+				        	<image class="ico_list_playpeople" src="https://static.zuiqiangyingyu.cn/admin/1808/0824ico_list_playp.png" /> 
+				        </view>
+					</view>
+			        
+			        <view wx:if="{{item.status == 1}}" class="label_text">
+						已拥有
+					</view>
+					<view wx:elif="{{item.status == 2}}" class="label_text" style='background-image: linear-gradient(-137deg, #EC8E70 0%, #F24539 100%);'>
+						限时免费
+					</view>
+					<!--<view wx:elif="{{item.status == 0}}" class="label_text" style='background-image: linear-gradient(-137deg, #BB69FF 0%, #4320BA 100%);'>
+						未拥有
+					</view>-->
+				</view>
+				<view class="song_list_text1" style='margin-top: 12rpx;'>
+					{{item.name}}
+				</view>
+				<view class="song_list_text1  " style='font-size: 24rpx; opacity: 0.7;'>
+					{{item.remark}}
+				</view>
+			</view>	
+		</button>
+	</block>
+</view>

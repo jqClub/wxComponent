@@ -1,0 +1,16 @@
+<!--这个 是通知中心的显示-->
+<view class="banner_back" style="margin-top: 24rpx;">
+	<image class="banner_img " src="{{item.image}}"  lazy-load="true" ></image>			
+	<view style="margin: 0 24rpx; margin-top: 24rpx; padding-bottom: 24rpx; border-bottom: 2rpx solid #DEDEDE;">
+		<view class="banner_title1 ">
+			<!--福利全新升级福利-->
+			{{item.name}}
+		</view>
+		<text class="banner_describe1" style="">{{item.description}}</text>
+	</view>
+	
+	<view wx:if="{{item.jump_type != 0}}" class="look_more" style="margin: 0 24rpx; position: relative;">
+		<view class="">查看详情</view>
+		<image class="absolute_top more1" src="../../img/more.png"  lazy-load="true" ></image>
+	</view>
+</view>

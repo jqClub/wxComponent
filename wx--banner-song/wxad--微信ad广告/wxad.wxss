@@ -1,0 +1,13 @@
+/*09.13新增修改*/
+.ad_btn {
+	width: 300rpx;
+	height: 130rpx;
+}
+
+/*居中显示*/
+.child_center{
+ 	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+ }

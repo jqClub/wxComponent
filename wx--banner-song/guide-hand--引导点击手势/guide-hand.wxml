@@ -1,0 +1,5 @@
+<!--11.05引导点击第一个按钮-->
+<view wx:if="{{!hasClick}}" >
+	<image class="finger"  src="https://static.zuiqiangyingyu.cn/admin/1811/d78f98dc47d04df676a188ff029552cd.png"  mode="widthFix"></image>
+	<view class="circle" ></view>
+</view>

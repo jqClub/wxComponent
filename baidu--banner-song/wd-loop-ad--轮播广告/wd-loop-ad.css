@@ -1,0 +1,52 @@
+/*.img{
+  width: 100%;
+  height: 100%;
+}*/
+
+.img_home_card1 {
+	/*width: 120rpx;
+	height: 120rpx;*/
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+}
+
+/*晃动动画*/
+.Shaking{-webkit-animation: Shaking 1.2s linear infinite;}
+@-webkit-keyframes Shaking {
+  0%,
+  100% {-webkit-transform: rotate(-20deg) ;}
+  50%{-webkit-transform: rotate(20deg);}}
+
+/*晃动动画2*/
+.Shaking2{-webkit-animation: Shaking2 0.5s linear infinite;}
+@-webkit-keyframes Shaking2 {
+  0%,
+  100% {-webkit-transform: rotate(-20deg) scale(1.1);}
+  50%{-webkit-transform: rotate(20deg) scale(1);}}
+  /*晃动动画3*/
+ .Shaking3{-webkit-animation: Shaking3 1.2s linear infinite;}
+@-webkit-keyframes Shaking3 {
+  0%,
+  100% {-webkit-transform: rotate(-6deg) ;}
+  50%{-webkit-transform: rotate(6deg);}
+  }
+ 
+/*晃动动画4 只晃动一次*/
+.Shaking4{
+	-webkit-animation: Shaking2 0.5s linear infinite;
+	animation-iteration-count: 1;
+}
+@-webkit-keyframes Shaking2 {
+  0%,
+  100% {-webkit-transform: rotate(-12deg) ;}
+  50%{-webkit-transform: rotate(12deg);}
+ }
+ 
+ /*晃动动画*/
+.Shaking5{-webkit-animation: Shaking5 2s linear infinite;}
+@-webkit-keyframes Shaking5 {
+  0%,
+  100% {-webkit-transform: rotate(-20deg);}
+  50%{-webkit-transform: rotate(20deg);}
+ }

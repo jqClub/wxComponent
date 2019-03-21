@@ -1,0 +1,17 @@
+/*11.27新增修改*/
+.ad-btn {
+	width: 272rpx;
+	height: 145rpx;
+}
+.ad-style-compent {
+	width: 750rpx;
+	height: 250rpx !important;
+}
+
+/*居中显示*/
+.child_center{
+ 	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+ }

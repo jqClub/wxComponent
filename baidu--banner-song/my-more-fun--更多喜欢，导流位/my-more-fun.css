@@ -1,0 +1,342 @@
+.test {
+	border: 1px solid black !important;
+}
+.img{
+  width: 100%;
+  height: 100%;
+}
+
+.img_home_card1 {
+	width: 222rpx;
+	height: 154rpx;
+}
+
+
+/*19.1.17新增，猜你喜欢*/
+.adsBG_view{
+	width: 750rpx;
+	height: 258rpx;
+	/*height: 192rpx;*/
+	position: relative;
+}
+
+.adsBG {
+	width: 100%;
+	height: 258rpx;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+} 
+
+.adsBG_title{
+ z-index: 2; 
+ position: relative;
+ text-align: center;
+ 
+	 /*width:119px;
+	height:29px;*/
+	font-size:30rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	/*color:rgba(254,241,206,1);*/
+	/*opacity:0.5;*/
+	
+	/*color: #FD7371;*/
+	
+	/*width: 50rpx;
+	position: absolute;
+	left: 30rpx;
+	top: 60rpx*/
+}
+
+
+.slider_view {
+	width:112rpx;
+	height:130rpx;
+}
+.slider_img {
+	width:112rpx;
+	height:112rpx;
+	background:rgba(134,134,134,1);
+	border:4rpx solid rgba(213, 95, 63, 1);
+	border-radius:50%;
+}
+
+
+/*.button
+{
+  margin: 20rpx;
+}*/
+.scroll-x {
+  display: flex;
+  flex-direction: row; 
+}
+.scroll-y {
+  display: flex;
+  flex-direction: column; 
+}
+.slider_clid {
+	display: flex;
+  align-items: center;
+  width: 112rpx;
+  height: 112rpx;
+  /*background: green;*/
+  
+  width:112rpx;
+	height:112rpx;
+	/*background:rgba(134,134,134,1);*/
+	border:4rpx solid rgba(213, 95, 63, 1);
+	border-radius:50%;
+}
+
+.slider_clid_new {
+	display: flex;
+  align-items: center;
+  width: 106rpx;
+  height: 106rpx;
+  
+  
+	/*background:rgba(134,134,134,1);*/
+	border:4rpx solid rgba(213, 95, 63, 1);
+	border-radius:50%;
+}
+
+.slider_father {
+	font-size:28rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(254,241,206,1);
+	
+	/*margin-left: 60rpx;*/
+		margin-right: 60rpx;
+	/*line-height:51rpx;*/
+	
+	/*width:112rpx;*/
+	/*height:112rpx;*/
+}
+
+.slider_father_new {
+	font-size:24rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(254,241,206,1);
+	
+	/*margin-left: 60rpx;*/
+		margin-right: 60rpx;
+		
+		flex-direction: column;
+	/*line-height:51rpx;*/
+	
+	/*width:112rpx;*/
+	/*height:112rpx;*/
+}
+
+.slider_father_button {
+	width: 120rpx;
+	padding: 0;
+	/*background: #FFA3A4;*/
+}
+
+.slider_father_button::after {
+    border: none;
+}
+
+.caini_title {
+	/*color: #FD7371;*/
+	color: #333333;
+	text-align: center;
+}
+
+
+
+/*----------------------------------*/
+.display_flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*19.2.27新增，更多好玩*/
+.more_fun {
+	/*width:632rpx;*/
+	height:270rpx;
+	width: 600rpx;
+	/*height: 290rpx;*/
+	background: #F4F7F9;
+	
+	border-radius: 20rpx;
+	justify-content: flex-start;
+	
+	position: relative;
+}
+
+.more_fun_left {
+	width: 80rpx;
+	height:100%;
+	
+	/*writing-mode: vertical-rl;*/
+	
+	font-size:26rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	
+	border-right: 1rpx solid #d5d5d5;
+	border-radius: 20rpx 0 0 20rpx;
+	
+	
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	background: #F4F7F9;
+}
+
+.app_list {
+	display: flex;
+	flex-wrap: wrap;
+	
+	width: 460rpx;
+}
+
+.app_li_text {
+	font-size:21rpx;
+	font-family:Adobe Heiti Std R;
+	font-weight:normal;
+	color:rgba(104,66,38,1);
+	/*line-height:39rpx;*/
+	
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+ .app_li {
+	/*width:85rpx;
+	height:85rpx;*/
+	width:82rpx;
+	height:82rpx;
+	
+	border-radius: 50%;
+}
+
+.border_all {
+	border: 5rpx solid #965F2A;
+}
+
+
+.rubberBand {
+	animation: rubberBand 0.5s ease-in infinite alternate;
+	-webkit-animation-name: rubberBand;
+	animation-name: rubberBand
+}
+
+@keyframes rubberBand {
+	0% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+		/*-webkit-transform: rotate(-6deg);*/
+	}
+	30% {
+		-webkit-transform: scale3d(1.15,.85,1);
+		transform: scale3d(1.15,.85,1);
+		/*-webkit-transform: scale3d(1.1,0.9,2);
+		transform: scale3d(1.1,0.9,2)*/
+	}
+	50% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+		/*-webkit-transform: rotate(6deg);*/
+	}
+	/*to {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1)
+	}*/
+}
+
+.rubberBand1 {
+	animation: rubberBand 0.5s ease-in infinite alternate;
+	-webkit-animation-name: rubberBand;
+	animation-name: rubberBand
+}
+@keyframes rubberBand1 {
+	0% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+	30% {
+		/*-webkit-transform: scale3d(1.15,.85,1);
+		transform: scale3d(1.15,.85,1)*/
+		-webkit-transform: scale3d(1.1,0.9,2);
+		transform: scale3d(1.1,0.9,2)
+	}
+	50% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+	/*to {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1)
+	}*/
+}
+
+
+
+/*----------------------------------*/
+/*19.2.27新增，更多好玩*/
+.more_fun {
+	width:632rpx;
+	/*height:280rpx;*/
+	/*width: 600rpx;*/
+	height: 310rpx;
+	background: #F4F7F9;
+	
+	border-radius: 20rpx;
+	justify-content: flex-start;
+}
+
+.more_fun_left {
+	width: 80rpx;
+	/*height:100%;*/
+	height: 310rpx;
+	
+	/*writing-mode: vertical-rl;*/
+	
+	font-size:32rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	
+	border-right: 1rpx solid #d5d5d5;
+}
+
+.app_list {
+	display: flex;
+	flex-wrap: wrap;
+	
+	/*width: 460rpx;*/
+	width: 500rpx;
+}
+
+.app_li_text {
+	font-size:21rpx;
+	font-family:Adobe Heiti Std R;
+	font-weight:normal;
+	color:rgba(104,66,38,1);
+	/*line-height:39rpx;*/
+	
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+ .app_li {
+	/*width:85rpx;
+	height:85rpx;*/
+	width:82rpx;
+	height:82rpx;
+	
+	border-radius: 50%;
+}
+
+.border_all {
+	border: 5rpx solid #965F2A;
+}

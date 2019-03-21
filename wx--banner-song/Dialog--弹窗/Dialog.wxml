@@ -1,0 +1,20 @@
+	
+	<view class="pop_tc opacityDown" wx:if="{{isShow}}" >	
+        <view class="pop_tc_view scaleAM" style="background: url(https://static.zuiqiangyingyu.cn/wechatApp/banma_song/src/public/images_02/tcbg_01.png); background-size: 100% 100%; width: 460rpx; height: 400rpx;">
+            <view class='skip_text'>
+            	提示
+            </view>
+            <view class="skip_text1">
+            	这是一段简单的教学，时间大约需要30秒，后面也不会出现第二次，是否需要跳过呢？
+            </view>
+            <view class="display_flex skip_view test">
+            	<button class="skip_button" catchtap="_cancelEvent">
+	            	<view class="">取消</view>
+	            </button>
+	            <button class="skip_button" catchtap="_confirmEvent" style="background: #48C172; color: #ffffff;">
+	            	<view class="">同意</view>
+	            </button>
+            </view>
+        </view>
+    </view>
+    

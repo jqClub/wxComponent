@@ -1,0 +1,21 @@
+<!--使用了wd-loop-ad组件，需要搭配起来使用-->
+<!--<my-more-fun  list="{{bmsAdResultGames}}" cssType="result" flag="result_games"></my-more-fun>-->
+
+<!--19.2.28新增——结果页面的更多好玩-->
+<view class="display_flex more_fun " style="margin: 20rpx 0; height: 310rpx;">
+	<view  class="display_flex more_fun_left " style="height: 310rpx;">
+		<view  style="width: 50rpx; text-align: center;">
+			更多好玩
+		</view>
+	</view>
+	<!--右边的6个广告位-->
+	<view class="display_flex app_list " style="margin-left: 100rpx; height: 310rpx;">
+		<block s-for="{{list}}" wx:key="unique">
+		  <view s-if="{{list && list.length}}"  class="display_flex app_li_text  {{index+1 == showIndex ? 'rubberBand' : ''}}" style="margin-right: {{(index + 1) % 3 ? 60 : 0}}rpx; margin-bottom: 5rpx;">
+				<wd-loop-ad  ad-list="{{[item]}}" cssType="{{cssType}}" flag="{{flag}}" >
+				</wd-loop-ad>
+			</view>
+		</block>
+	</view>
+</view>
+			  		

@@ -1,0 +1,67 @@
+
+page {
+	/*background: linear-gradient(#7C2DE8,#5F18D9);*/
+	background: #7C2DE8;
+	/*min-height: 100%;*/
+}
+
+.banner_back{
+	width: 702rpx;
+	/*height: 522rpx;*/
+	
+	background: #FFFFFF;
+	border-radius: 24rpx;
+	
+	display: flex;
+  	flex-direction: column;
+  	text-align: left;
+  	
+  	margin: 0 auto;
+}
+.banner_img{
+	width: 659rpx;
+	height: 272rpx;
+	
+	margin: 0 auto;
+	
+	margin-top: 24rpx;
+}
+
+.banner_title1{
+	text-align: left;
+	font-size: 32rpx;
+	color: #333333;
+	letter-spacing: 0;
+}
+
+.banner_describe1{
+	font-size: 28rpx;
+	color: #999999;
+	letter-spacing: 0;
+}
+
+
+.look_more{
+	height: 88rpx;
+	line-height: 88rpx;
+	
+	font-size: 28rpx;
+	color: #333333;
+	letter-spacing: 0;
+}
+.more1{
+	width: 40rpx;
+	height: 40rpx;
+	
+	position: absolute;
+	right: 0;
+}
+
+/*垂直居中*/
+.absolute_top {
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+

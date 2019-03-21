@@ -1,0 +1,76 @@
+.circle {
+			width: 80rpx;
+			height: 80rpx;
+			border-radius: 50%;
+			position: absolute;
+			left: 10rpx;
+			top: 10rpx;
+			z-index: 3;
+			animation: circleHide 2s .15s ease infinite;
+			}
+			
+			.finger {
+			width: 96rpx;
+			height: 104rpx;
+			position: absolute;
+			left: 60rpx;
+			top: 12rpx;
+			z-index: 2;
+			animation: fingerHandle 2s linear infinite both;
+			transform-origin: 100% 100%;
+			}
+			
+			@keyframes fingerHandle {
+			0% {
+			transform: rotate(0deg);
+			}
+			
+			9% {
+			transform: rotate(-25deg);
+			
+			}
+			
+			23% {
+			transform: rotate(30deg);
+			}
+			
+			42% {
+			transform: rotate(-25deg);
+			}
+			
+			50% {
+			transform: rotate(0);
+			}
+			
+			100% {
+			transform: rotate(0);
+			}
+			}
+			
+			@keyframes circleHide {
+			0% {
+			opacity: 0.8;
+			transform: scale(0.5);
+			background: #222;
+			}
+			18% {
+			opacity: 0;
+			transform: scale(2);
+			}
+			31.9% {
+			opacity: 0;
+			transform: scale(2);
+			}
+			32% {
+			opacity: 0.8;
+			transform: scale(0.5);
+			}
+			60% {
+			opacity: 0;
+			transform: scale(2);
+			}
+			100% {
+			opacity: 0;
+			transform: scale(2);
+			}
+			}
