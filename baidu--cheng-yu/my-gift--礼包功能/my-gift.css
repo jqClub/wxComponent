@@ -1,0 +1,735 @@
+/*///////////////////////////////////////////////////*/
+.global {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background: rgba(0, 0, 0, 0.8);*/
+ background: rgba(0, 0, 0, 0.9);
+ 
+   /*19.3.12新增，可滑动*/
+  overflow: auto;
+}
+.display_flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*margin: 0 auto;居中*/
+.margin0 {
+	margin: 0 auto;
+}
+
+/*居中显示*/
+.child_center{
+ 	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ /*左右居中*/
+.absolute_left {
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*垂直居中*/
+.absolute_top {
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.test {
+	border: 1px solid black !important;
+}
+
+/*呼吸效果*/
+.w600h90 {
+    animation: imageScale 0.5s infinite;
+}
+
+@keyframes imageScale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        /*transform: scale(1.05);*/
+       transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*晃动动画4 只晃动一次*/
+.Shaking4{
+	-webkit-animation: Shaking2 0.5s linear infinite;
+	animation-iteration-count: 1;
+}
+@-webkit-keyframes Shaking2 {
+  0%,
+  100% {-webkit-transform: rotate(-12deg) ;}
+  50%{-webkit-transform: rotate(12deg);}
+ }
+ 
+ 
+ /*旋转动画*/
+.rotate{
+  /*-webkit-animation: trophybg_rotate 1.2s linear infinite;*/
+  -webkit-animation: trophybg_rotate 3s linear infinite;
+}
+@-webkit-keyframes trophybg_rotate {
+  0%,
+  100% {    -webkit-transform: rotate(0deg) ;  }
+  50%{  	-webkit-transform: rotate(180deg);  }
+  100% {-webkit-transform: rotate(360deg); }
+}
+
+ /*旋转动画*/
+.rotate2{
+  /*-webkit-animation: trophybg_rotate 1.2s linear infinite;*/
+  -webkit-animation: trophybg_rotate 3s linear infinite;
+  -webkit-transform:scale(3);
+}
+@-webkit-keyframes trophybg_rotate {
+  0%,
+  100% {    
+  	-webkit-transform: rotate(0deg) ;
+    }
+  50%{  	
+  	-webkit-transform: rotate(180deg);
+    }
+  100% {
+  	-webkit-transform: rotate(360deg);
+   }
+}
+
+
+/*放大弹入*/
+.scaleAM{
+	-webkit-transition: all 0.05s;
+	-webkit-animation:scaleAM 0.2s ease both;
+}
+@-webkit-keyframes scaleAM {
+  0%{-webkit-transform:scale(0); }
+  70%{-webkit-transform:scale(1.1); }
+  80%{-webkit-transform:scale(0.9); }
+  100% { -webkit-transform:scale(1); }
+}
+/*放大弹入1：比较温柔*/
+.scaleAM1{
+	-webkit-transition: all 0.05s;
+	-webkit-animation:scaleAM1 0.2s ease both;
+}
+@-webkit-keyframes scaleAM1 {
+  0%{-webkit-transform:scale(0.5); }
+  100% { -webkit-transform:scale(1); }
+}
+
+
+/*缩小进入*/
+.arena_narrowAM{
+	-webkit-animation:arena_narrowAM 0.3s ease both;
+}
+@-webkit-keyframes arena_narrowAM {
+  0%{opacity: 0; -webkit-transform:scale(1.3); }
+  100% {opacity: 1; -webkit-transform:scale(1); }
+}
+/*顶部淡入*/
+.fadeInDown{
+-webkit-animation:fadeInDown 1s ease both;
+}
+@-webkit-keyframes fadeInDown{
+0%{opacity:0;
+-webkit-transform:translateY(-20px)}
+100%{opacity:1;
+-webkit-transform:translateY(0)}
+}
+/*底部淡入*/
+/*.fadeInUp{
+        -webkit-animation:fadeInUp 0.5s ease both;
+}
+@-webkit-keyframes fadeInUp{
+        0%{opacity:0;
+        -webkit-transform:translateY(20px)}
+        100%{opacity:1;
+        -webkit-transform:translateY(0px)}
+}*/
+.fadeInUpNew{
+        -webkit-animation:fadeInUpNew 0.5s ease both;
+}
+@-webkit-keyframes fadeInUpNew{
+        0%{opacity:0;
+        -webkit-transform:translateY(100px)}
+        100%{opacity:1;
+        -webkit-transform:translateY(0px)}
+}
+/*////////////////////////////////////////*/
+
+.global_view {
+	flex-direction: column;
+	
+	position: relative;
+	justify-content: flex-start;
+	/*width: 100%;*/
+	width:600rpx;
+	height:834rpx;
+}
+
+.bag {
+	width:600rpx;
+	height:834rpx;
+	
+	z-index: -1;
+}
+.open {
+	width:180rpx;
+	height:180rpx;
+}
+.open_view {
+	position: absolute;
+	top: 500rpx;
+	
+}
+
+.bag_text {
+	font-size:100rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:bold;
+	color:rgba(255,219,183,1);
+}
+.bag_text1 {
+	font-size:42rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(255,219,183,1);
+}
+
+.global_close {
+	width:80rpx;
+	height:80rpx;
+	
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/*已获得弹窗*/
+.get_money {
+	font-size:120rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:bold;
+	color:rgba(255,219,183,1);
+}
+.get_money1 {
+	font-size:40rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(255,219,183,1);
+}
+.balance {
+	width:276rpx;
+	height:48rpx;
+	line-height:48rpx;
+	background:rgba(0,0,0,0.2);
+	border-radius:24rpx;
+	
+	text-align: center;
+	font-size:28rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(255,219,183,1);
+}
+
+.get_bottom {
+	position: absolute;
+	bottom: 43rpx;
+}
+.get_btext1 {
+	/*width:154rpx;*/
+	width:170rpx;
+	height:45rpx;
+	line-height:45rpx;
+	background:rgba(0,0,0,0.2);
+	
+	text-align: center;
+	font-size:36rpx;
+	color: #F4CC55;
+	border-radius:12rpx;
+}
+
+
+.balance1 {
+	width:244rpx;
+	height:58rpx;
+	line-height:58rpx;
+	background:rgba(0,0,0,0.2);
+	border-radius:29rpx;
+	
+	text-align: center;
+	font-size:40rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	font-weight:bold;
+	color:rgba(255,219,183,1);
+}
+.bag_text2 {
+	width:511rpx;
+	
+	text-align: center;
+	font-size:48rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:bold;
+	font-weight:400;
+	color:rgba(255,219,183,1);
+}
+
+/*19.2.22新增按钮样式*/
+.img_piaodai_text {
+	width:437rpx;
+	height:97rpx;
+	line-height:88rpx;
+	text-align: center;
+	
+	background: url(https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/btn_6.png)
+      no-repeat ;
+      /*//铺满整个界面*/
+   background-size:100% 100%; 
+   
+   position: relative;
+   
+	font-size:43rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:bold;
+	color:rgba(87,72,23,1);
+}
+
+.share_open {
+	width:450rpx;
+	height:114rpx;
+	line-height:114rpx;
+	text-align: center;
+	
+	background: url(https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/btn_bottom.png)
+      no-repeat ;
+      /*//铺满整个界面*/
+   background-size:100% 100%; 
+   
+	font-size:42rpx;
+	font-family:SourceHanSansCN-Medium;
+	font-weight:500;
+	color:rgba(68,68,68,1);
+}
+
+
+.light_view {
+	position: relative;
+}
+.treasureClose {
+	width:334rpx;
+	height:289rpx;
+	
+	position: absolute;
+	top: 20rpx;
+	left: 140rpx;
+}
+
+.treasureClose_new {
+	width:150rpx;
+	height:132rpx;
+}
+
+/*-----------------------*/
+.getReward {
+	width:316rpx;
+	height:83rpx;
+}
+.add_ynfu {
+	font-size:50rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(250,236,219,1);
+	/*-webkit-text-stroke:1rpx #2D2108;
+	text-stroke:1rpx #2D2108;*/
+	
+	position: absolute;
+	/*bottom: 30rpx;*/
+	top: 400rpx;
+}
+
+.give_up {
+	/*font-size: 40rpx;*/
+	font-size: 38rpx;
+	color: #349AF9;
+	
+	border-bottom: 1rpx solid #349AF9;
+}
+
+/*-----------------------------------------------------*/
+.icon_hongbao {
+	width:102rpx;
+	height:107rpx;
+	
+	position: absolute;
+	top: 374rpx;
+	right: 10rpx;
+}
+
+.img_piaodai_position {
+	width:552rpx;
+	height:157rpx;
+	
+	position: absolute;
+	top: -90rpx;
+}
+
+.img_piaodai {
+	width:552rpx;
+	height:157rpx;
+	
+	background: url(https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/img_piaodai.png)
+      no-repeat ;
+      /*//铺满整个界面*/
+   background-size:100% 100%; 
+   
+   position: relative;
+}
+
+.img_piaodai1 {
+	background: url(https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/img_piaodai2.png)
+      no-repeat ;
+  background-size:100% 100%; 
+}
+
+.txt_daan {
+	position: absolute;
+	
+	width:300rpx;
+	height:80rpx;
+	top: 57rpx;
+}
+
+.pop_all_text {
+	width:636rpx;
+	height:428rpx;
+	margin: 0 auto;
+	/*background:#F1BA94;*/
+	/*border-radius:24rpx;*/
+	
+	/*border: 10rpx solid #FEDCAE;*/
+	position: relative;
+}
+.pop_all_img {
+	background: url(https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/img_bg4.png)
+      no-repeat ;
+      /*//铺满整个界面*/
+   background-size:100% 100%; 
+}
+
+.pop_all_img1 {
+	background: url(https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/img_bg6.png)
+      no-repeat ;
+      /*//铺满整个界面*/
+   background-size:100% 100%; 
+}
+
+.pop_all_img2 {
+	background: url(https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/img_bg5.png)
+      no-repeat ;
+      /*//铺满整个界面*/
+   background-size:100% 100%; 
+}
+
+.img_piaodai_text {
+	width:437rpx;
+	height:97rpx;
+	line-height:88rpx;
+	text-align: center;
+	
+	background: url(https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/btn_6.png)
+      no-repeat ;
+      /*//铺满整个界面*/
+   background-size:100% 100%; 
+   
+   position: relative;
+   
+	font-size:43rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:bold;
+	color:rgba(87,72,23,1);
+}
+
+.img_piaodai_text2 {
+	background: url(https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/btn_7.png)no-repeat ;
+	background-size:100% 100%; 
+}
+
+.img_piaodai_text1 {
+	font-size:96rpx;
+	font-family:MicrosoftYaHei;
+	font-weight:400;
+	color:rgba(150,95,42,1);
+}
+
+.icon_xingxing3 {
+	width:44rpx;
+	height:44rpx;
+}
+
+.level_text {
+	font-size:36rpx;
+	font-family:AaMianHuatang;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	/*-webkit-text-stroke:1rpx #714A21;
+	text-stroke:1rpx #714A21;*/
+}
+
+.level_view {
+	justify-content: flex-start; 
+	width: 100%;
+}
+
+.anser_explain {
+	width:572rpx;
+	height:158rpx;
+	background:rgba(204,144,107,0.5);
+	border-radius:20rpx;
+	
+	font-size:26rpx;
+	font-family:MicrosoftYaHei;
+	font-weight:400;
+	color:rgba(113,74,33,1);
+}
+
+.icon_aixin {
+	width:46rpx;
+	height:41rpx;
+	
+	position: absolute;
+	top:-4rpx;
+	left: -20rpx;
+}
+.img_jia {
+	width:41rpx;
+	height:41rpx;
+	
+	position: absolute;
+	top:-4rpx;
+	right: -20rpx;
+}
+.icon_view {
+	/*width:174rpx;*/
+	height:35rpx;
+	line-height:35rpx;
+	text-align: center;
+	background:rgba(189,111,34,0.68);
+	border-radius:18rpx;
+	
+	position: relative;
+	
+	
+	font-size:32rpx;
+	font-family:AaMianHuatang;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	
+	padding: 0 30rpx;
+}
+
+.line_css {
+	width:590rpx;
+	font-size:38rpx;
+	font-family:AaMianHuatang;
+	font-weight:900;
+	color:rgba(204,144,107,1);
+	
+	border-bottom: 3rpx dashed rgba(204,144,107,1);
+}
+
+.img_more {
+	width:123rpx;
+	height:174rpx;
+}
+
+.app_list {
+	 display: flex;
+	flex-wrap: wrap;
+	
+	width: 450rpx;
+}
+
+.app_li {
+	width:85rpx;
+	height:85rpx;
+}
+
+.app_li_text {
+	font-size:21rpx;
+	font-family:Adobe Heiti Std R;
+	font-weight:normal;
+	color:rgba(104,66,38,1);
+	line-height:39rpx;
+	
+	flex-direction: column;
+	justify-content: flex-start
+}
+
+.txt_zaijiezaili {
+	width:338rpx;
+	height:84rpx;
+}
+
+.succeed {
+	font-size:36rpx;
+	font-family:AaMianHuatang;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	/*-webkit-text-stroke:2px undefined;
+	text-stroke:2px undefined;*/
+}
+
+.txt_guoguan {
+	width:477rpx;
+	height:140rpx;
+}
+
+.icon_xingxing {
+	width:55rpx;
+	height:53rpx;
+}
+
+.icon_xingxing_view {
+	width:328rpx;
+	height:77rpx;
+	background:rgba(255,237,168,0.5);
+	border-radius:20rpx;
+}
+
+.btn_4_view {
+	width:150rpx;
+	height:168rpx;
+	position: relative;
+	
+	text-align: center;
+	line-height: 150rpx;
+	font-size:82rpx;
+	font-family:MicrosoftYaHei-Bold;
+	font-weight:bold;
+	color:rgba(150,95,42,1);
+}
+.btn_4 {
+	width:150rpx;
+	height:168rpx;
+	
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.level_list {
+	display: flex;
+  flex-wrap: wrap;
+    
+  width: 510rpx;
+}
+.change_btn_5 {
+	width:74rpx;
+	height:130rpx;
+	
+	position: absolute;
+	top: 300rpx;
+}
+
+.btn_5_left {
+	transform:rotate(-180deg);
+	
+	left: -80rpx;
+}
+.btn_5_right {
+	right: -80rpx;
+}
+
+
+/*--------------------------------*/
+/*19.2.22新增,弹窗*/
+.piaodai_text {
+	font-size:48rpx;
+	font-family:SourceHanSansCN-Bold;
+	font-weight:bold;
+	color:rgba(255,219,183,1);
+	
+	align-items: flex-start;
+}
+
+
+.icon_aixin1 {
+	width:62rpx;
+	height:54rpx;
+	
+	position: relative;
+	background: url(https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/icon_aixin1.png)no-repeat ;
+	background-size:100% 100%; 
+}
+
+.hint_text {
+	width:537rpx;
+	height:90rpx;
+	background:rgba(167,108,64,1);
+	border-radius:45rpx;
+	
+
+	font-size:34rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(255,247,241,1);
+	
+	position: relative;
+}
+
+.num {
+	font-size:34rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(255,247,241,1);
+	/*-webkit-text-stroke:1rpx #451E10;
+	text-stroke:1rpx #451E10;*/
+	
+	position: absolute;
+	bottom: -15rpx;
+}
+
+.num1 {
+	font-size:34rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(255,247,241,1);
+}
+.global_close_new {
+	width:80rpx;
+	height:80rpx;
+	
+	position: absolute;
+	top: -100rpx;
+	right: -20rpx;
+}
+
+.gongxi {
+	font-size:40rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(104,66,38,1);
+}
+
+.share_get {
+	font-size:40rpx;
+	font-family:SourceHanSansCN-Regular;
+	font-weight:400;
+	color:rgba(104,66,38,1);
+}
+

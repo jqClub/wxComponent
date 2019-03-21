@@ -1,0 +1,129 @@
+<!--宝箱功能-->
+<view class="global" s-if="{{game_state}}">
+	<!--未领取的弹窗-->
+	<view class="display_flex"  s-if="{{game_state == 1}}"  style=" flex-direction: column;">
+		<view class="display_flex global_view" style="margin-top: 50rpx;">
+			<!--关闭按钮-->
+			<image catchtap="clickAll" data-clicktype="close" class="global_close" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/close.png" ></image>
+			<image class="child_center bag" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/bag.png" ></image>
+			
+			<view class="bag_text" style="margin-top: 157rpx;">
+				恭喜你
+			</view>
+			<view  class="bag_text1" style="margin-top: 32rpx;">
+				获得一个现金红包
+			</view>
+			<button class="absolute_left open_view">
+				<image catchtap="clickAll" data-clicktype="openShare" class="open" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/open.png" ></image>
+			</button>
+			<!--<view class="bag_text1" style="font-size: 36rpx; margin-top:370rpx;">
+				分享可打开红包
+			</view>-->
+			<view class="bag_text1 get_bottom" style="font-size: 36rpx;">
+				分享可打开红包
+			</view>
+		</view>
+	</view>
+	<!--已领取的界面-->
+	<view class="display_flex" s-if="{{game_state == 2}}" style=" flex-direction: column;">
+		<view class="display_flex global_view" style="margin-top: 50rpx;">
+			<!--关闭按钮-->
+			<image catchtap="clickAll" data-clicktype="close" class="global_close" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/close.png" ></image>
+			<image class="child_center bag" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/bag.png" ></image>
+
+			<view class="bag_text1" style="margin-top: 137rpx;">
+				恭喜发财，大吉大利！
+			</view>
+			<view  class="display_flex  " style="align-items: flex-end;">
+				<view class="get_money  ">{{balance}}</view>
+				<view class="get_money1  " style="position: relative; bottom: 30rpx;">元</view>
+			</view>
+			<view class="balance">
+				余额：{{userInfo.balance}} 元
+			</view>
+			
+			
+			<view class="absolute_left open_view">
+				<image catchtap="clickAll" data-clicktype="close" class="open" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/got.png" ></image>
+			</view>
+			
+			<view class="display_flex get_bottom  ">
+				<view class="bag_text1" style="font-size: 36rpx;">
+					满{{levels.withdraw.last}}元可提现
+				</view>
+				<view catchtap="clickAll" data-clicktype="goto_withdraw" class="get_btext1" style="margin-left: 10rpx;">
+					去提现 >
+				</view>
+			</view>
+		</view>
+		
+		<!--<view>继续答题</view>-->
+		<!--按钮-->
+		<button catchtap="clickAll" data-clicktype="close" data-play="1" class="img_piaodai_text" style="margin-top: 10rpx;">
+			继续答题
+		</button>
+	</view>
+	
+	<!--提现时间已过，转成能量值-->
+		<view  class="global" s-if="{{game_state == 5 }}">
+			<view class="display_flex" style="flex-direction: column; ">
+				<view class="display_flex pop_all_text pop_all_img" style="margin-top: 340rpx; flex-direction: column;">
+					<image catchtap="clickAll" data-clicktype="closeOnly" class="global_close_new" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/close.png" ></image>
+					
+					<view class="img_piaodai_position  " style="justify-content: flex-start;">
+						<view class="display_flex img_piaodai piaodai_text  " >
+						 	<view class=" " style="margin-top: 20rpx;">提示</view>
+						</view>
+					</view>
+
+					<view class="display_flex gongxi">
+						提现时间已过，余额已转为能量值
+					</view>
+					
+					
+					<view class="display_flex  " style="margin-top: 36rpx; position: relative; justify-content:flex-end; align-items: flex-end; ">
+						<view class="icon_aixin1" style="width: 150rpx; height: 132rpx;"></view>
+						<view class="num1">X{{userInfo.balance}}</view>
+					</view>
+				</view>
+				
+				<button catchtap="clickAll" data-clicktype="closeOnly" class="img_piaodai_text" style="margin-top: 42rpx;">
+						继续游戏
+				</button>
+			</view>
+		</view>
+
+	<!--红包余额-->
+	<view class="display_flex"  s-if="{{game_state == 6}}"  style=" flex-direction: column;">
+		<view class="display_flex global_view" style="margin-top: 50rpx;">
+			<!--关闭按钮-->
+			<image catchtap="clickAll" data-clicktype="closeOnly" class="global_close" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/close.png" ></image>
+			<image class="child_center bag" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/bag.png" ></image>
+
+			<view class="bag_text1" style="margin-top: 137rpx;">
+				红包余额
+			</view>
+			<view  class="display_flex  " style="align-items: flex-end;">
+				<view class="get_money  ">{{userInfo.balance}}</view>
+				<view class="get_money1  " style="position: relative; bottom: 30rpx;">元</view>
+			</view>
+			<view class="balance">
+				累计满{{levels.withdraw.last}}元可提现
+			</view>
+			
+			
+			<view class="absolute_left open_view">
+				<image catchtap="clickAll" data-clicktype="goto_withdraw" class="open" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/btn_tixian.png" ></image>
+			</view>
+			
+			<view  class="display_flex get_bottom  ">
+				<view class="bag_text1" style="font-size: 36rpx;">
+					每次过关都有机会获得红包
+				</view>
+			</view>
+		</view>
+		<!--<view>继续答题</view>-->
+	</view>
+	
+	<slot></slot>
+</view>

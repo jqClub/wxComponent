@@ -1,0 +1,69 @@
+		<!--获取能量值-->
+		<view  class="global" s-if="{{game_state}}">
+			<!--能量值不足的提示-->
+			<view s-if="{{game_state == 1}}" class="display_flex" style="flex-direction: column; ">
+				<view class="display_flex pop_all_text pop_all_img" style="margin-top: 340rpx; flex-direction: column;">
+					<!--关闭按钮-->
+					<image catchtap="clickAll" data-clicktype="close" class="global_close_new" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/close.png" ></image>
+					
+					<!--顶部的飘带-->
+					<view class="img_piaodai_position  " style="justify-content: flex-start;">
+						<view class="display_flex img_piaodai piaodai_text  " >
+						 	<view class=" " style="margin-top: 20rpx;">获取能量值</view>
+						</view>
+					</view>
+		
+					<!--答案的内容-->
+					<view class="share_get">分享到群 可免费获得能量值</view>
+					
+					<!--提示信息-->
+					<view class="display_flex hint_text" style="margin-top: 27rpx;">
+						<view class="icon_aixin1" style="margin-right: 15rpx;">
+							<view class="num">X30</view>
+						</view>
+						
+						礼包内最高含 <view style="color: #46FFA6;">10</view> 倍能量值
+					</view>
+				</view>
+		
+				<!--按钮-->
+				<button catchtap="clickAll" data-clicktype="shareOpen" class="img_piaodai_text" style="margin-top: 42rpx;">
+						马上去
+				</button>
+			</view>
+			
+			<!--分享后打开能量值-->
+				<view s-if="{{game_state == 2 }}" class="display_flex" style="flex-direction: column; ">
+					<view class="display_flex pop_all_text pop_all_img" style="margin-top: 340rpx; flex-direction: column;">
+	
+						<image catchtap="clickAll" data-clicktype="close" class="global_close_new" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/close.png" ></image>
+						
+						<view class="img_piaodai_position  " style="justify-content: flex-start;">
+							<view class="display_flex img_piaodai piaodai_text  " >
+							 	<view class=" " style="margin-top: 20rpx;">太棒了</view>
+							</view>
+						</view>
+			
+						<view class="display_flex gongxi">
+							恭喜获得
+							<view style="color:#DC3448">{{powerValue.multiple}}</view>
+							倍能量值
+						</view>
+						
+						
+						<view class="display_flex  " style="margin-top: 36rpx; position: relative; justify-content:flex-end; align-items: flex-end; ">
+							<view class="icon_aixin1" style="width: 150rpx; height: 132rpx;"></view>
+						
+							<view class="num1">X{{powerValue.energyNum}}</view>
+						</view>
+					</view>
+					
+	
+					<button catchtap="clickAll" data-clicktype="close" class="img_piaodai_text" style="margin-top: 42rpx;">
+						继续答题
+					</button>
+					
+				</view>
+				
+			<slot></slot>
+		</view>

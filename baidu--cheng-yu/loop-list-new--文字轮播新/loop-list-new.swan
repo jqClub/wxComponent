@@ -1,0 +1,50 @@
+<!--<view >
+     <swiper autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" style="height: 35rpx; width: 600rpx; line-height: 35rpx;">
+        <block s-for="{{background}}"  s-key="this">
+          <swiper-item class="display_flex" style="height: 35rpx; width: 600rpx; line-height: 35rpx;">
+    		<view s-if="{{looptype != 1}}" class="display_flex icon_text">
+           		{{item}}
+    		</view>
+    		
+    		<view s-else class="display_flex icon_text">
+    			{{item.name}} 刚刚提现了
+    			<view style="color:#FFED57;">{{item.money}}</view>
+    			元
+    		</view>
+          </swiper-item>
+        </block>
+      </swiper> 
+</view>-->
+
+ <!--<view s-for="{{doommData}}" style="animation:fadeInOut {{item.time}}s ease both;">-->
+<!--<view >
+   
+    <view s-for="{{doommData}}" style="animation:fadeInOut 0.5s ease both;">
+        	老王 刚刚提现了
+    </view>
+</view>-->
+
+<!--<view class="award_box display_flex"  style="top: {{styleHwds.top + 'rpx'}}; opacity: {{styleHwds.opacity}}; position:absolute;">-->
+			<!--信息-->
+			<!--<view style="">
+				<view class="text_size02 maincolor_fff">{{ Winners_List[winnersNow].nickname }}挑战成功</view>
+				<view class="text_size02 maincolor_04">获得月卡1个</view>
+			</view>-->
+	<!--<view>{{Winners_List[winnersNow]}}</view>-->
+<!--</view>-->
+
+
+<scroll-view scroll-y style="height: 150px;" scroll-top="{= scrollTop =}" bind:scroll="myscroll" scroll-with-animation="true">
+    <view id="one" class="bg-red">view1</view>
+    <view id="two" class="bg-green">view2</view>
+    <view id="three" class="bg-yellow">view3</view>
+    <view id="four" class="bg-blue">view4</view>
+</scroll-view>
+
+<!--
+	<view class="display_flex icon_text" style="margin-left: 20rpx;">
+    			老王 刚刚提现了
+    			<view style="color:#FFED57;">99.09</view>
+    			元
+    		</view>
+-->

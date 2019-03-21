@@ -1,0 +1,6 @@
+<view class="comp myclass">
+  <!--<image class="pic animated zoomIn" mode="aspectFill" src="{{img}}" s-if="img" bindload="ready"></image>-->
+  <image class="pic animated zoomIn"  src="{{img}}" s-if="img" bindload="ready"></image>
+  <!--19.2.20去除loading的动画-->
+  <!--<image class="loading" src="../../imgs/loading.gif" mode="aspectFill" hidden="{{isReady}}"></image>-->
+</view>

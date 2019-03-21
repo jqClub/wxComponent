@@ -1,0 +1,58 @@
+<!--宝箱功能-->
+<view class="global" s-if="{{game_state}}">
+	<!--礼包的界面-->
+	<view class="display_flex" s-if="{{game_state == 1}}" style="flex-direction: column;">
+		<view class="display_flex global_view" style="margin-top: 50rpx;">
+			<!--关闭按钮-->
+			<image catchtap="clickAll" data-clicktype="close" class="global_close" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/close.png" ></image>
+			<image class="child_center bag" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/bag.png" ></image>
+			
+			
+			<view class="balance1"  style="margin-top: 57rpx;">
+				豪华礼包
+			</view>
+			<view class="display_flex bag_text2" style="margin-top: 100rpx;">
+				200元现金、500元手机话费海量放送、N倍能量值
+			</view>
+			
+			<view class="bag_text1" style="font-size: 28rpx; margin-top: 120rpx;">
+				每天送出10000元大奖
+			</view>
+			
+			<button catchtap="clickAll" data-clicktype="openShare" class="share_open" style="margin-top: 97rpx;">分享到群打开礼包</button>
+		</view>
+	</view>
+	
+	<!--获得礼包-->
+	<view class="display_flex" s-if="{{game_state == 2}}" style="flex-direction: column;">
+		<view class="display_flex global_view" style="margin-top: 50rpx;">
+			<!--关闭按钮-->
+			<image catchtap="clickAll" data-clicktype="close" class="global_close" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/close.png" ></image>
+			<image class="child_center bag" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/bag.png" ></image>
+			
+			
+			<view class="balance1"  style="margin-top: 57rpx;">
+				豪华礼包
+			</view>
+			<!--<view class="display_flex bag_text2" style="margin-top: 100rpx;">
+				200元现金、500元手机话费海量放送、N倍能量值
+			</view>
+			
+			<view class="bag_text1" style="font-size: 28rpx; margin-top: 120rpx;">
+				每天送出10000元大奖
+			</view>-->
+			<view class="display_flex light_view  " style="height: 525rpx;">
+		  		<image class="rotate light" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/light.png" ></image>
+		  		<image class="child_center treasureClose_new  " src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/icon_aixin1.png" ></image>
+		  		
+		  		<!--<view class="absolute_left add_ynfu">能量值 x {{money}}</view>-->
+		  		<view class="absolute_left add_ynfu">能量值 x 5</view>
+		  	</view>
+		  	
+			<button catchtap="clickAll" data-clicktype="close" data-play="1" class="share_open" style="margin-top: 0;">继续答题</button>
+			<!--<view catchtap="clickAll" data-clicktype="close" class=" absolute_left share_open" style="top: 540rpx;">继续答题</view>-->
+		</view>
+	</view>
+	
+	<slot></slot>
+</view>

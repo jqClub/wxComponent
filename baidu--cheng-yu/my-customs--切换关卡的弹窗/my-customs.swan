@@ -1,0 +1,121 @@
+<!--宝箱功能-->
+<!--<view class="global">
+	<view class="display_flex">
+		<view class="display_flex panelBG">
+			用户等级：{{levelName}}-{{level}}-{{num}}-{{userTimu}}-{{clickCiuu}}
+
+			<view class="display_flex pic_08_view" style="margin-top: 139rpx;">
+				<block s-for="{{[1, 2, 3, 4]}}" s-key="unique">
+					<image s-if="{{index+1 <= showStar }}" class="pic_08" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/pic_08.png" ></image>
+					<image s-else  class="pic_08" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/pic_08_1.png" ></image>
+				</block>
+			</view>
+			
+			<view class="flex" style="position: relative; margin-top: 37rpx;">
+				<block s-for="{{locks}}" s-key="unique">
+						<view s-if="{{item - timuLen < 10}}" class="flex_view" style="margin-right: {{(index + 1) % 3 ? 10 : 0 }}rpx;">
+							<block s-if="{{item - userTimu < 10}}">
+								<image catchtap="openTimu" data-item="{{item}}" data-isopen="1" class="wordBG" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/wordBG.png" ></image>	
+								<view catchtap="openTimu" data-item="{{item}}" data-isopen="1" class="child_center">{{index + 1}}</view>
+							</block>
+							<block s-else>
+								<image catchtap="openTimu" data-item="{{item}}"  class="wordBG" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/lock.png" ></image>
+							</block>
+						</view>
+				</block>
+				
+				<image s-if="{{showButton.left}}" catchtap="clickAll" data-clicktype="reduce" class="change change_left" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/change.png" ></image>	
+				<image s-if="{{showButton.right}}" catchtap="clickAll" data-clicktype="add" class="change change_right" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/change.png" ></image>	
+			</view>
+		</view>
+	</view>
+</view>-->
+
+<!--宝箱功能-->
+<!--<view class="global">
+	<view class="display_flex">
+		<view class="display_flex panelBG">
+			用户等级：{{levelName}}-{{level}}-{{num}}-{{userTimu}}-{{clickCiuu}}
+
+			<view class="display_flex pic_08_view" style="margin-top: 139rpx;">
+				<block  s-for="{{[1, 2, 3, 4]}}"  s-key="unique">
+					<image  s-if="{{index+1 <= showStar }}" class="pic_08" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/pic_08.png" ></image>
+					<image  s-else  class="pic_08" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/pic_08_1.png" ></image>
+				</block>
+			</view>
+			
+			<view class="flex" style="position: relative; margin-top: 37rpx;">
+				<block  s-for="{{locks}}"  s-key="unique">
+						<view  s-if="{{item - timuLen < 10}}" class="flex_view" style="margin-right: {{(index + 1) % 3 ? 10 : 0 }}rpx;">
+							<block  s-if="{{item - userTimu < 10}}">
+								<image catchtap="openTimu" data-item="{{item}}" data-isopen="1" class="wordBG" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/wordBG.png" ></image>	
+								<view catchtap="openTimu" data-item="{{item}}" data-isopen="1" class="child_center">{{index + 1}}</view>
+							</block>
+							<block  s-else>
+								<image catchtap="openTimu" data-item="{{item}}"  class="wordBG" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/lock.png" ></image>
+							</block>
+						</view>
+				</block>
+				
+				<image  s-for="{{showButton.left}}" catchtap="clickAll" data-clicktype="reduce" class="change change_left" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/change.png" ></image>	
+				<image  s-for="{{showButton.right}}" catchtap="clickAll" data-clicktype="add" class="change change_right" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/change.png" ></image>	
+			</view>
+			
+			
+		</view>
+	</view>
+</view>-->
+<view class="global" s-if="{{showCustoms}}">
+	<view class="display_flex" style="flex-direction: column;">
+		
+		<!--用户等级：{{levelName}}-{{level}}-{{num}}-{{userTimu}}-{{clickCiuu}}-->
+		
+		<!--关闭按钮-->
+		<!--<image s-if="{{treasure.delayed}}" catchtap="clickAll" data-clicktype="close" class="global_close" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/close.png" ></image>-->
+		<image catchtap="closePop"  class="global_close" src="https://static.zuiqiangyingyu.cn/wb_webview/caigebaidu_jq/close.png" ></image>
+		
+		<!--用户等级：{{levelName}}-{{level}}-{{num}}-{{userTimu}}-{{clickCiuu}}-->
+		<view class="display_flex pop_all_text pop_all_img2" style="margin-top: 165rpx; flex-direction: column; height:778rpx; width:576rpx; justify-content: flex-start;">
+			<!--顶部的飘带-->
+			<view class="img_piaodai_position">
+				<view class="display_flex img_piaodai">
+				 	<!--<image class="child_center txt_daan" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/level1.png" ></image>-->
+				 	<!--<image class="child_center txt_daan" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/level{{level+1}}.png" ></image>-->
+				 	<image class="child_center txt_daan" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/level{{level}}.png" ></image>
+				</view>
+			</view>
+			
+			<!--顶部的星星-->
+			<!--<view class="display_flex icon_xingxing_view" style="margin-top: 70rpx;">
+				<block  s-for="{{[1, 2, 3, 4]}}"  s-key="unique1">
+	    			<image  s-if="{{index+1 <= showStar }}" class="icon_xingxing" style="margin-right:8rpx;" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/icon_xingxing.png" ></image>
+	    			<image  s-else class="icon_xingxing" style="margin-right:8rpx;" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/icon_xingxing2.png" ></image>
+				</block>
+			</view>-->
+			
+			<!--显示的9个方块-->
+			<!--<view class="display_flex level_list  " style="margin-top: 20rpx;">-->
+			<view class="display_flex level_list  " style="margin-top: 150rpx;">
+					<block  s-for="{{locks}}"  s-key="unique">
+						<view  s-if="{{item - timuLen < 10}}" class="btn_4_view" style="margin-right: {{(index + 1) % 3 == 0 ? 0 : 30}}rpx; margin-bottom: 26rpx;">
+							<block  s-if="{{item - userTimu < 10}}">
+								<image catchtap="openTimu" data-item="{{item}}" data-isopen="1" class="btn_4"  src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/btn_4.png" ></image>
+								<!--<view catchtap="openTimu" data-item="{{item}}" data-isopen="1" style="position: relative; z-index: 1;">{{showStar * 90 + index + 1}}</view>-->
+								
+								<view catchtap="openTimu" data-item="{{item}}" data-isopen="1" style="position: relative; z-index: 1;">{{(showStar-1) * 9 + index + 1}}</view>
+							</block>
+							
+							<image  s-else catchtap="openTimu" data-item="{{item}}" class="btn_4"  src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/btn_suo.png" ></image>
+						</view>
+					</block>
+			</view>
+			<!--左右的按钮-->
+		<image  s-if="{{showButton.left}}" catchtap="clickAll" data-clicktype="reduce" class="change_btn_5 btn_5_left" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/btn_5.png" ></image>	
+		<image  s-if="{{showButton.right}}" catchtap="clickAll" data-clicktype="add" class="change_btn_5 btn_5_right" src="https://static.zuiqiangyingyu.cn/wb_webview/baidu_program/btn_5.png" ></image>
+			
+		</view>
+	</view>
+	
+	<slot></slot>
+</view>
+

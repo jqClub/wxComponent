@@ -1,0 +1,22 @@
+<!--
+使用方法如下，默认为index	
+<wxad id="myShow" adNewType="result"></wxad>
+
+//根据ID获取组件对象
+var showTwo = this.selectComponent('#myShow');
+//19.2.13不用切换
+if(showTwo) {
+	showTwo.showNewAd()
+}
+-->
+
+<block s-for="{{apids}}" s-for-index="ind">
+	<view s-if="{{adType == ind}}" class="ad-style-compent" style='position: relative; '>
+		<ad bindload="loadSuccess" binderror="loadError" data-style="{{'index' + ind}}" appid="efe156f9" apid="{{item}}"  class="ad" type="banner" style="background: #FFFFFF;"></ad>
+		
+		<view s-if="{{showAd['index' + ind]}}"  class="child_center" style="pointer-events: none;">
+	  		<image class="ad-btn" src="https://static.zuiqiangyingyu.cn/admin/1809/clickMe.gif"></image>
+		</view>
+	</view>
+</block>
+    
